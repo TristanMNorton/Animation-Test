@@ -7,7 +7,9 @@ $( document ).ready(function() {
     var viewPortMidPointX = (docWidth / 2);
     var viewPortMidPointY = (docHeight / 2);
 
- 
+    $()
+
+
     $("#wrapper").on('mousemove', function(e){
         
         var xAxis = e.pageX;
@@ -17,12 +19,15 @@ $( document ).ready(function() {
         $('#playerToon').css({
                left: xAxis,
                top: yAxis
-           
        });
        
        $('#playerToon2').css({
             left: currentPosition[0],
             top: currentPosition[1]
+       });
+       $('.toonContainer').children().css({
+            left:-(this.clientWidth / 4),
+            top: -(this.clientHeight / 4)
        });
     });
     $("#wrapper").on('mousemove', function(e){
